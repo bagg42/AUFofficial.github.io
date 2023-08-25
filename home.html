@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANNANTUNNATIFOUNDATION</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/ec366b3a1c.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* border: 2px solid red; */
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            width: 100%;
+            min-height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-image: url(images/headimg.jpg);
+            min-height: 700px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 3.5rem;
+            box-sizing: border-box;
+            background-color: rgba(12, 12, 12, 0.6);
+        }
+
+        nav ul {
+            margin-top: 0.313rem;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-evenly;
+            font-size: 2rem;
+            box-sizing: border-box;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .text {
+            color: aliceblue;
+            text-align: center;
+            width: 70%;
+        }
+
+        nav li a:hover {
+            color: rgb(192, 192, 192);
+            transition: all 0.30s;
+            font-size: 2.2rem;
+        }
+
+        .active {
+            color: rgb(142, 142, 255);
+            /* text-decoration: underline; */
+        }
+
+        .active:hover {
+            color: rgb(142, 142, 255);
+            cursor: context-menu;
+            /* text-decoration: underline; */
+            font-size: 2rem;
+        }
+
+        .imgg {
+            border-radius: 50%;
+            width: 37%;
+        }
+
+        .head1 {
+            margin-top: 1rem;
+            font-size: 2.8rem;
+            text-align: center;
+        }
+
+        .para1 {
+            margin-top: 4rem;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width:800px) {
+            nav ul {
+                justify-content: center;
+            }
+
+            nav ul a {
+                margin: 10px;
+                font-size: 1.2rem;
+            }
+
+            nav li a:hover {
+                font-size: 1.5rem;
+            }
+
+            .active:hover {
+                font-size: 1.2rem;
+            }
+            .head1{
+                font-size:2.5rem;
+            }
+        }
+
+        .headings {
+            margin-top: 1.25rem;
+            padding: 1rem;
+            font-size: 2.5rem;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            background-color: rgb(228, 202, 219);
+
+        }
+
+        .events {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(228, 202, 219);
+        }
+
+        .boxa {
+            width: 350px;
+            height: 250px;
+            margin: 1.875rem 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 8px 8px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #boxa1 {
+            background-image: url(images/flag2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #boxa2 {
+            background-image: url(images/pad2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #boxa3 {
+            background-image: url(images/tree2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .eventlink {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            padding: 5.2rem 1rem;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.171);
+        }
+
+        .eventlink:hover {
+            cursor: pointer;
+            font-size: 2.1rem;
+            color: rgb(255, 255, 255);
+            transition: all .30s;
+            background-color: rgba(0, 0, 0, 0.632);
+        }
+
+        @media(max-width:1000px) {
+            .events {
+                flex-wrap: wrap;
+            }
+        }
+
+        .bgstats {
+            width: 100%;
+            background-image: url(images/stats.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .stats {
+            background-color: rgba(0, 9, 79, 0.845);
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1.5rem;
+            text-align: center;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .statbox {
+            width: 20%;
+            margin: 1rem;
+        }
+        .statnum{
+            font-size: 3.5rem;
+        }
+
+        .statname {
+            font-weight: 200;
+            margin-top: 0.5rem;
+        }
+        @media (max-width:630px) {
+            .statnum{
+                font-size: 1.9rem;
+            }
+            
+        }
+
+        @media (max-width:400px) {
+            .stats {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        .aboutngo {
+            width: 100%;
+        }
+
+        .boxb {
+            display: flex;
+            justify-content: center;
+            margin: 2.5rem 0;
+        }
+
+        .textb {
+            width: 600px;
+            height: 450px;
+            margin: 1.875rem;
+            display: flex;
+            flex-direction: column;
+            padding: 0.5rem;
+            box-shadow: rgba(0, 0, 0, 0.356) 0px 5px 15px;
+        }
+
+        #boxb1 {
+            background-color: rgba(37, 3, 158, 0.250);
+        }
+
+        #boxb2 {
+            background-color: rgba(27, 69, 117, 0.250);
+        }
+
+        #boxb3 {
+            background-color: rgba(20, 84, 73, 0.250);
+        }
+
+        .imgb {
+            width: 600px;
+            height: 450px;
+            margin: 1.875rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #listb {
+            text-align: left;
+            padding: 1rem;
+        }
+
+        .headb {
+            font-size: 1.5rem;
+            width: 100%;
+            margin: 0.5rem;
+            color: rgb(94, 49, 49);
+            text-align: center;
+        }
+
+        .parab {
+            width: 100%;
+            font-size: 1.2em;
+            margin: auto 0;
+        }
+
+        .butnb {
+            background-color: orangered;
+            padding: 0.5rem 0.75rem;
+            width: 100px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: azure;
+            text-decoration: none;
+            position: absolute;
+            bottom: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .butnb:hover {
+            background-color: rgb(224, 60, 0);
+            transition: all 0.5s;
+            font-size: 1rem;
+            width: 7rem;
+        }
+
+        @media (max-width:1250px) {
+            .boxb {
+                flex-wrap: wrap;
+            }
+
+            .imgb {
+                width: 80%;
+                height: auto;
+            }
+
+            .textb {
+                width: 80%;
+                text-align: center;
+                height: auto;
+            }
+        }
+
+        .mission {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgb(228, 202, 219);
+        }
+
+        .boxd {
+            width: 400px;
+            margin: 1.25rem;
+            border-radius: 1.25rem;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .imgd {
+            width: 100%;
+            height: 300px;
+            border-radius: 1.25rem 1.25rem 0 0;
+        }
+
+        .textd {
+            padding: 6px;
+            /* background-color: blue; */
+        }
+
+        .card-title {
+            font-size: 2.2rem;
+            text-align: center;
+            color: rgb(4, 0, 129);
+        }
+
+        .card-text {
+            padding: 5px;
+            font-size: 1rem;
+            text-align: center;
+            font-weight: 400;
+            color: rgb(81, 0, 9);
+        }
+
+        @media (max-width:420px) {
+            .card-text {
+                font-size: 0.8rem;
+            }
+        }
+
+        footer {
+            background-image: url(images/footer.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .footbg {
+            background-color: rgba(0, 0, 0, 0.804);
+            text-align: center;
+            padding: 1.5rem 0.5rem;
+        }
+
+        .footbox1 {
+            height: 2.5rem;
+        }
+
+        .footbox2 {
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+        }        
+        .foota {
+            margin: 0.4rem;
+        }
+        .foota img{
+            width: 21px;
+        }
+        .footb {
+            flex-wrap: wrap;
+            margin: 0.5rem;
+        }
+        .footb i {
+            font-size: 0.9rem;
+            margin-right: 0.4rem;
+        }
+        .foota img:hover {
+            width: 30px;
+        }
+        @media (max-width:650px) {
+            .footbox2 {
+                flex-direction: column;
+            }
+
+            .footb {
+                margin: 0.2rem;
+            }
+
+            .footbg {
+                padding: 0.7rem;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="text">
+            <img src="images/logo.png" alt="" class="imgg">
+            <h1 class="head1">ANNANT UNNATI FOUNDATION</h1>
+            <p class="para1">Reg. No.- AASCA8913DE20213 <br>
+                (Registered under Niti-Ayog and Tax exemption under 12A,80G)
+            </p>
+        </div>
+    </div>
+
+    <h1 class="headings">LATEST EVENTS</h1>
+    <div class="events">
+        <div class="boxa" id="boxa1"><a href="https://www.instagram.com/reel/CwB3gD5gwF3/?igshid=MzRlODBiNWFlZA=="
+                class="eventlink" target="_blank">Independence Day Celebration</a>
+        </div>
+        <div class="boxa" id="boxa2"><a href="https://www.instagram.com/reel/Cvh8XkPAU2e/?igshid=MzRlODBiNWFlZA=="
+                class="eventlink" target="_blank">Sanitary Pad Distribution Drive</a>
+        </div>
+        <div class="boxa" id="boxa3"><a href="https://www.instagram.com/reel/Cu5yxwAATwj/?igshid=MzRlODBiNWFlZA=="
+                class="eventlink" target="_blank">Tree plantation <br> Day</a>
+        </div>
+    </div>
+
+    <div class="bgstats">
+        <div class="stats">
+            <div class="statbox">
+                <h1 class="statnum">350+</h1>
+                <h5 class="statname">Helped children</h5>
+            </div>
+            <div class="statbox">
+                <h1 class="statnum">200k+</h1>
+                <h5 class="statname">Donations</h5>
+            </div>
+            <div class="statbox">
+                <h1 class="statnum">50+</h1>
+                <h5 class="statname">Volunteers</h5>
+            </div>
+            <div class="statbox">
+                <h1 class="statnum">50+</h1>
+                <h5 class="statname">Projects</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="aboutngo">
+
+        <div class="boxb" id="boxb1">
+            <img src="images/we are.jpeg" alt="" class="imgb">
+            <div class="textb">
+                <h2 class="headb">WHO WE ARE?</h2>
+                <p class="parab">A seed of an idea that was ~~
+                    dreamt in 2017, germinated in 2019,
+                    was to make the world a better place.
+                    With each small and consistent step we
+                    tried to touch every visualized
+                    milestone. <br>
+                    Annant Unnati Foundation, a non
+                    government organization, is a team of
+                    knack and thrilled volunteers, working
+                    together with an aim to eradicate
+                    illiteracy, poverty and starving. We also
+                    strive for providing moral values and
+                    making every child a responsible
+                    citizen for a better India. With a united
+                    front, we fight to bring about a change
+                    in every sphere of life, to touch souls
+                    and change destinies.
+                </p>
+            </div>
+        </div>
+
+        <div class="boxb" id="boxb2">
+            <div class="textb">
+                <h2 class="headb">WHAT WE BELIEVE IN?</h2>
+                <p class="parab"> <i>I alone cannot change the world, but I can cast a stone across
+                        the waters to create many ripples. <br>
+                        -Mother Teresa </i> <br> <br>
+                    Our mission is to thrive for a world where every child attains
+                    the right to survive, education, protection, development and
+                    participation. We aim to bring about holistic change and
+                    cognitive thinking in young minds. <br>
+                    With this mission Annant Unnati Foundation was established
+                    in 2019, good intentions and noble approach always gets
+                    awarded, and on the opening day 74 children handed over
+                    their destiny in our hands. Within 6 months, the number
+                    increased to 350+ along with 40+ volunteers joining hands for
+                    the noble cause. In less than six months, another center was
+                    inaugurated with 97 children.
+                </p>
+            </div>
+            <img src="images/believe in.jpeg" alt="" class="imgb">
+        </div>
+
+        <div class="boxb" id="boxb3">
+            <img src="images/we do.jpeg" alt="" class="imgb">
+            <div class="textb">
+                <h2 class="headb">WHAT WE DO?</h2>
+                <ul class="parab" id="listb">
+                    <li>Providing quality education to the
+                        underprivileged children .</li>
+                    <li>Promoting awareness towards a sound health
+                        among the children.</li>
+                    <li>Facilitating vocational training to the children 
+                        to reduce their skill gap which will help them in
+                        either getting employed or starting their own
+                        enterprise.</li>
+                    <li>Promoting moral education among children so as
+                        to make them responsible citizens.</li>
+                    <li>Educating children about the importance of a
+                        clean environment and its benefits.</li>
+                    <li>Support underprivileged economically in terms
+                        of providing admissions in schools.</li>
+                    <li>Provide inclusive education to children with
+                        special needs</li>
+                    <li>Increase the number of school going children.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="headings">MISSION ACCOMPLISHED</h1>
+
+    <div class="mission">
+        <div class="boxd">
+            <img src="images/aahar.jpeg" alt="" class="imgd">
+            <div class="textd">
+                <h3 class="card-title">Project Aahaar</h3>
+                <p class="card-text">
+                    The corona pandemic turned many
+                    lives upside down. Due to
+                    imposition of lock-down thousands
+                    of people lost their livelihoods.
+                    Therefore, we came forward to
+                    help those in need and distributed
+                    dry ration as well as cooked meals
+                    to 2000+ families.
+                </p>
+            </div>
+        </div>
+        <div class="boxd">
+            <img src="images/care.jpeg" alt="" class="imgd">
+            <div class="textd">
+                <h3 class="card-title">Project Care</h3>
+                <p class="card-text">
+                    This program aims to overcome one of the
+                    major public health challenges of maintaining
+                    oral hygiene. Many children lack the
+                    awareness of oral hygiene leading to severe
+                    health damages. This initiative aims to
+                    promote oral hygiene among children. We organized two free
+                    dental health check-up camps in span of an
+                    year. A team of four dentists assessed the oral
+                    hygiene of 215 children and distributed dental
+                    hygiene kits.
+                </p>
+            </div>
+        </div>
+
+        <div class="boxd">
+            <img src="images/aashayein.jpeg" alt="" class="imgd">
+            <div class="textd">
+                <h3 class="card-title">Project Aashayein</h3>
+                <p class="card-text">
+                    The objective of this project is to provide
+                    students an opportunity to express themselves
+                    through the means of different activities and
+                    focus on their all round personality
+                    development. Our foundation organizes annual
+                    cultural and sports programs and various
+                    dance, yoga, singing, painting and drama
+                    classes on weekends. This program has helped
+                    promote holistic development and cognitive
+                    skills in our children.
+                </p>
+            </div>
+        </div>
+
+        <div class="boxd">
+            <img src="images/vikas.jpeg" alt="" class="imgd">
+            <div class="textd">
+                <h3 class="card-title">Project Vikas</h3>
+                <p class="card-text">
+                    Through this project, we aim to spread basic
+                    literacy in the society. We have taken several
+                    initiatives to achieve this, such as providing
+                    free education to over 200 underprivileged
+                    students and enrolling them in schools and
+                    colleges for higher education. We also provide
+                    books and stationery kits to our students to
+                    ensure quality education for all.
+                </p>
+            </div>
+        </div>
+
+        <div class="boxd">
+            <img src="images/odh.jpeg" alt="" class="imgd">
+            <div class="textd">
+                <h3 class="card-title">Project ODH</h3>
+                <p class="card-text">
+                    We conducted over 10 blanket distribution
+                    drive in the winter months. Our team of
+                    volunteers went around the NCR and
+                    distributed more than 500 blankets to the
+                    poor and homeless. We also conducted 5
+                    clothes distribution drives in the region of
+                    Indirapuram, Ghaziabad. This ensured a
+                    smile on the faces of people struggling to
+                    fight the chilly winter.
+                </p>
+            </div>
+        </div>
+        <div class="boxd">
+            <img src="images/shesafe.jpeg" alt="" class="imgd">
+            <div class="textd">
+                <h3 class="card-title">Project SheSafe</h3>
+                <p class="card-text">
+                    Through our SheSafe Project we took the initiative to
+                    distribute 100,000 sanitary pads to the needy and organized awareness meetings among
+                    the backward communities in different regions. We Provided access to sanitary pads to at least 10,000 women.
+                    One thousand (1000) school girls received support through proper knowledge,
+                    awareness and education on menstruation and related hygiene practices.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footbg">
+            <div class="footbox1">
+                <a href="https://maps.app.goo.gl/8kVH7sGimpcxr7hSA" class="foota" target="_blank"><img src="images/placeholder.png" alt=""></a>
+                <a href="https://www.facebook.com/profile.php?id=100066601167252&mibextid=b06tZ0" class="foota" target="_blank"><img src="images/facebook.png" alt=""></a>
+                <a href="https://instagram.com/annantunnatifoundation?igshid=MzRlODBiNWFlZA==" class="foota" target="_blank"><img src="images/instagram.png" alt=""></a>
+                <a href="https://twitter.com/AnnantUnnatiNGO" class="foota" target="_blank"><img src="images/twitter.png" alt=""></a>
+                <a href="https://www.linkedin.com/company/annant-unnati-foundation/" class="foota" target="_blank"><img src="images/linkedin.png" alt=""></a>
+                <a href="https://www.youtube.com/@annantunnatifoundation9013" class="foota" target="_blank"><img src="images/youtube2.png" alt=""></a>            
+            </div>
+            <div class="footbox2">
+                <p class="footb"><i class="fa-solid fa-location-dot" style="color: #ffffff;" id="home"></i>Swarn
+                    Jayanti Park</p>
+                <p class="footb"><i class="fa-solid fa-phone" style="color: #ffffff;"></i>9818223340, 9818015241</p>
+                <p class="footb"><i class="fa-solid fa-envelope"
+                        style="color: #ffffff;"></i>annantunnatifoundation@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

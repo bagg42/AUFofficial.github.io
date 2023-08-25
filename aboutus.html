@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/ec366b3a1c.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* border: 2px solid red; */
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            width: 100%;
+            height: 3.4rem;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.712);
+            position: fixed;
+            top: 0;
+        }
+
+        nav ul {
+            margin-top: 0.313rem;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            justify-content: space-evenly;
+            font-size: 2rem;
+            box-sizing: border-box;
+            font-weight: 520;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        nav li a:hover {
+            color: rgb(192, 192, 192);
+            transition: all 0.30s;
+            font-size: 2.2rem;
+        }
+
+        .active {
+            color: rgb(142, 142, 255);
+            /* text-decoration: underline; */
+        }
+
+        .active:hover {
+            color: rgb(142, 142, 255);
+            cursor: context-menu;
+            /* text-decoration: underline; */
+            font-size: 2rem;
+        }
+
+        @media (max-width:800px) {
+
+            nav ul {
+                justify-content: center;
+            }
+
+            nav ul a {
+                margin: 10px;
+                font-size: 1.2rem;
+            }
+
+            nav li a:hover {
+                font-size: 1.5rem;
+            }
+
+            .active:hover {
+                font-size: 1.2rem;
+            }
+        }
+
+        .img {
+            width: 100%;
+            /* border: 2px solid blue; */
+            position: relative;
+            height: auto;
+        }
+
+        .text {
+            width: 100%;
+            background-image: url(images/pinkbg.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 2rem;
+            display: flex;
+            font-weight: 600;
+            flex-direction: column;
+            font-size: 1.4em;
+        }
+
+        .box1 {
+            align-self: first baseline;
+        }
+
+        .box2 {
+            align-self: last baseline;
+        }
+
+        .quote {
+            width: 80px;
+        }
+
+        .quoteopp {
+            width: 80px;
+            margin-top: 4px;
+        }
+
+        footer {
+            background-image: url(images/footer.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .footbg {
+            background-color: rgba(0, 0, 0, 0.804);
+            text-align: center;
+            padding: 1.5rem 0.5rem;
+        }
+
+        .footbox1 {
+            height: 2.5rem;
+        }
+
+        .footbox2 {
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .foota {
+            margin: 0.4rem;
+        }
+        .foota img{
+            width: 21px;
+        }
+
+        .footb {
+            flex-wrap: wrap;
+            margin: 0.5rem;
+        }
+
+        .footb i {
+            font-size: 0.9rem;
+            margin-right: 0.4rem;
+        }
+
+        .foota img:hover {
+            width: 30px;
+        }
+
+        @media (max-width:650px) {
+            .footbox2 {
+                flex-direction: column;
+            }
+
+            .footb {
+                margin: 0.2rem;
+            }
+
+            .footbg {
+                padding: 0.7rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img">
+        <img src="images/dpaboutus.png" alt="" class="img">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#" class="active">About Us</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+    <div class="text">
+        <div class="box1">
+            <img src="images/quote.png" alt="" class="quote">
+        </div>
+        <div>
+            At AUF the future of the underprivileged is chalked out. We
+            are committed to building a place where education for every
+            child, irrespective of the boundaries, is imparted. Today we are
+            poised for growth and are best position to develop literacy
+            achievements are made possible due to the trust we have built
+            through various activities taking place at Annant Unnati
+            Foundation. At AUF, we want to create an atmosphere in which
+            every deprived child can experience a sense of growth and
+            responsibility towards a better future. We would like to invite
+            you all to join hands with us to support and guide us in our
+            journey of making the country a better place to live in.
+        </div>
+        <div class="box2">
+            <img src="images/quoteopp.png" alt="" class="quoteopp">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footbg">
+            <div class="footbox1">
+                <a href="https://maps.app.goo.gl/8kVH7sGimpcxr7hSA" class="foota" target="_blank"><img
+                        src="images/placeholder.png" alt=""></a>
+                <a href="https://www.facebook.com/profile.php?id=100066601167252&mibextid=b06tZ0" class="foota"
+                    target="_blank"><img src="images/facebook.png" alt=""></a>
+                <a href="https://instagram.com/annantunnatifoundation?igshid=MzRlODBiNWFlZA==" class="foota"
+                    target="_blank"><img src="images/instagram.png" alt=""></a>
+                <a href="https://twitter.com/AnnantUnnatiNGO" class="foota" target="_blank"><img
+                        src="images/twitter.png" alt=""></a>
+                <a href="https://www.linkedin.com/company/annant-unnati-foundation/" class="foota" target="_blank"><img
+                        src="images/linkedin.png" alt=""></a>
+                <a href="https://www.youtube.com/@annantunnatifoundation9013" class="foota" target="_blank"><img
+                        src="images/youtube2.png" alt=""></a>
+            </div>
+            <div class="footbox2">
+                <p class="footb"><i class="fa-solid fa-location-dot" style="color: #ffffff;" id="home"></i>Swarn
+                    Jayanti Park</p>
+                <p class="footb"><i class="fa-solid fa-phone" style="color: #ffffff;"></i>9818223340, 9818015241</p>
+                <p class="footb"><i class="fa-solid fa-envelope"
+                        style="color: #ffffff;"></i>annantunnatifoundation@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
