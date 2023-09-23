@@ -28,7 +28,7 @@
             background-position: center;
             background-attachment: fixed;
             animation: bgchange;
-            animation-delay: 10s;
+            animation-delay: 30s;
             animation-duration: 100s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
@@ -82,7 +82,7 @@
             height: 3.5rem;
             box-sizing: border-box;
             background-color: rgba(12, 12, 12, 0.717);
-            backdrop-filter: blur(30px);
+            backdrop-filter: blur(15px);
         }
 
         nav ul {
@@ -175,9 +175,9 @@
         .headings {
             padding: 0.5rem;
             font-size: 2.5rem;
-            color: rgb(255, 255, 255);
+            color: rgb(2, 2, 2);
             text-align: center;
-            text-shadow: 2px 2px 2px black;
+            text-shadow: 1px 1px 2px rgb(50, 50, 50);
         }
 
         @media (max-width:650px) {
@@ -281,6 +281,12 @@
             .latestevents {
                 padding: 30px 10px;
             }
+            .eventlink:hover {
+                font-size: 1.4rem;
+            }
+            .eventlink span {
+                font-size: 0.5rem;
+        }
         }
 
         /* STATS */
@@ -360,15 +366,15 @@
         }
 
         #boxb1 {
-            background-color: rgb(199, 199, 255);
+            background-color: rgb(214, 210, 214);
         }
 
         #boxb2 {
-            background-color: rgb(160, 196, 190);
+            background-color: rgb(189, 212, 208);
         }
 
         #boxb3 {
-            background-color: rgb(171, 205, 236);
+            background-color: rgb(205, 224, 241);
         }
 
         .imgb {
