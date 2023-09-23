@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANNANTUNNATIFOUNDATION</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>Document</title>
     <script src="https://kit.fontawesome.com/ec366b3a1c.js" crossorigin="anonymous"></script>
     <style>
         * {
@@ -15,32 +14,89 @@
             box-sizing: border-box;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-
-        body {
-            position: relative;
+        img{
+            
         }
 
-        .header {
-            display: flex;
+        /* MAIN BACKGROUND */
+
+        .glassbg {
             width: 100%;
-            min-height: 500px;
+            height: 100vh;
+            position: relative;
+            background-image: url(img2/bg1.jpeg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            background-image: url(images/headimg.jpg);
-            min-height: 700px;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
+            background-attachment: fixed;
+            animation: bgchange;
+            animation-delay: 10s;
+            animation-duration: 150s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
         }
 
+        .glassbg-effect {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.422);
+            backdrop-filter: blur(1px);
+            padding: 3rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        @keyframes bgchange {
+
+            0%,
+            100% {
+                background-image: url(img2/bg1.jpeg);
+            }
+
+            12.5% {
+                background-image: url(img2/bg2.avif);
+            }
+
+            25% {
+                background-image: url(img2/bg3.avif);
+            }
+
+            37.5% {
+                background-image: url(img2/bg4.jpg);
+            }
+
+            50% {
+                background-image: url(img2/bg5.avif);
+            }
+
+            62.5% {
+                background-image: url(img2/bg6.jpg);
+            }
+
+            75% {
+                background-image: url(img2/bg7.jpg);
+            }
+
+            87.5% {
+                background-image: url(img2/bg8.jfif);
+            }
+        }
+
+        /* NAVBAR */
+
         nav {
+            z-index: 100;
             position: fixed;
             top: 0;
             width: 100%;
             height: 3.5rem;
             box-sizing: border-box;
-            background-color: rgba(12, 12, 12, 0.6);
+            background-color: rgba(12, 12, 12, 0.717);
+            backdrop-filter: blur(30px);
         }
 
         nav ul {
@@ -58,12 +114,6 @@
             color: aliceblue;
         }
 
-        .text {
-            color: aliceblue;
-            text-align: center;
-            width: 70%;
-        }
-
         nav li a:hover {
             color: rgb(192, 192, 192);
             transition: all 0.30s;
@@ -72,19 +122,30 @@
 
         .active {
             color: rgb(142, 142, 255);
-            /* text-decoration: underline; */
         }
 
         .active:hover {
             color: rgb(142, 142, 255);
             cursor: context-menu;
-            /* text-decoration: underline; */
             font-size: 2rem;
+        }
+
+
+        /* NGO INFO */
+
+        .ngo-info {
+            padding: 1rem;
+            color: aliceblue;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .imgg {
             border-radius: 50%;
-            width: 37%;
+            width: 30%;
         }
 
         .head1 {
@@ -115,99 +176,144 @@
             .active:hover {
                 font-size: 1.2rem;
             }
-            .head1{
-                font-size:2.5rem;
+
+            .head1 {
+                font-size: 2.5rem;
             }
         }
 
-        .headings {
-            margin-top: 1.25rem;
-            padding: 1rem;
-            font-size: 2.5rem;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            background-color: rgb(228, 202, 219);
 
+        /* LATEST-EVENTS */
+
+
+        .headings {
+            padding: 0.5rem;
+            font-size: 2.5rem;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .slide {
+            text-shadow: 2px 2px 2px black;
+            margin: auto;
+            width: 10rem;
+            display: block;
+            text-align: center;
+            color: rgb(247, 255, 98);
+            font-weight: 600;
+        }
+
+        .latestevents {
+            background-color: rgba(120, 120, 120);
+            padding: 30px 50px;
+            width: 100%;
         }
 
         .events {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            background-color: rgb(228, 202, 219);
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.1rem 0;
+        }
+
+        .events::-webkit-scrollbar {
+            display: none;
         }
 
         .boxa {
             width: 350px;
+            /* min-width: 300px; */
             height: 250px;
-            margin: 1.875rem 0.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 10px 8px;
+            color: rgb(0, 0, 0);
+            display: inline-block;
             border-radius: 10px;
-            box-shadow: 8px 8px 6px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-        #boxa1 {
-            background-image: url(images/flag2.png);
+            overflow: hidden;
+            text-align: center;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            box-shadow: 3px 3px 10px black;
+            position: relative;
         }
-
-        #boxa2 {
-            background-image: url(images/pad2.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-
-        #boxa3 {
-            background-image: url(images/tree2.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+        .boxa video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: relative;
         }
 
         .eventlink {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
             text-decoration: none;
+            padding: 1.7rem;
             color: rgb(255, 255, 255);
             height: 100%;
             width: 100%;
-            text-align: center;
-            font-size: 2rem;
-            padding: 5.2rem 1rem;
-            box-sizing: border-box;
-            background-color: rgba(0, 0, 0, 0.171);
+            font-size: 1.4rem;
+            opacity: 0;
+            transition: all 0.5s;
+            text-shadow: 2px 2px 2px rgb(0, 0, 0);
         }
 
         .eventlink:hover {
+            opacity: 1;
             cursor: pointer;
             font-size: 2.1rem;
             color: rgb(255, 255, 255);
             transition: all .30s;
-            background-color: rgba(0, 0, 0, 0.632);
+            background-color: rgba(5, 1, 27, 0.459);
         }
 
-        @media(max-width:1000px) {
-            .events {
-                flex-wrap: wrap;
+        .eventlink span {
+            font-size: 1rem;
+            color: rgb(239, 255, 114);
+        }
+
+        @media(max-width:600px) {
+            .boxa {
+                width: 200px;
+                height: 130px;
+            }
+
+            .latestevents {
+                padding: 30px 10px;
             }
         }
 
+        /* STATS */
+
+        .statswrap {
+            width: 100%;
+            padding: 0.3rem 0;
+            background-color: rgb(206, 206, 206);
+        }
+
         .bgstats {
+            margin: 2rem 0;
             width: 100%;
             background-image: url(images/stats.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            box-shadow: 0 0 5px black;
         }
 
         .stats {
             background-color: rgba(0, 9, 79, 0.845);
             display: flex;
             justify-content: space-evenly;
-            padding: 1.5rem;
+            padding: 1rem;
             text-align: center;
             color: white;
             font-size: 1.3rem;
@@ -217,7 +323,8 @@
             width: 20%;
             margin: 1rem;
         }
-        .statnum{
+
+        .statnum {
             font-size: 3.5rem;
         }
 
@@ -225,11 +332,12 @@
             font-weight: 200;
             margin-top: 0.5rem;
         }
+
         @media (max-width:630px) {
-            .statnum{
+            .statnum {
                 font-size: 1.9rem;
             }
-            
+
         }
 
         @media (max-width:400px) {
@@ -239,14 +347,12 @@
             }
         }
 
-        .aboutngo {
-            width: 100%;
-        }
+        /* ABOUT NGO */
 
         .boxb {
             display: flex;
             justify-content: center;
-            margin: 2.5rem 0;
+            margin-bottom: 2.5rem;
         }
 
         .textb {
@@ -256,26 +362,28 @@
             display: flex;
             flex-direction: column;
             padding: 0.5rem;
+            color: white;
+            text-shadow: 1px 1px 1px rgb(57, 57, 57);
             box-shadow: rgba(0, 0, 0, 0.356) 0px 5px 15px;
         }
 
         #boxb1 {
-            background-color: rgba(37, 3, 158, 0.250);
+            background-color: rgb(78, 78, 139);
         }
 
         #boxb2 {
-            background-color: rgba(27, 69, 117, 0.250);
+            background-color: rgb(101, 148, 141);
         }
 
         #boxb3 {
-            background-color: rgba(20, 84, 73, 0.250);
+            background-color: rgb(151, 106, 159);
         }
 
         .imgb {
             width: 600px;
             height: 450px;
             margin: 1.875rem;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.356) 0px 5px 15px;
         }
 
         #listb {
@@ -286,35 +394,16 @@
         .headb {
             font-size: 1.5rem;
             width: 100%;
-            margin: 0.5rem;
-            color: rgb(94, 49, 49);
+            padding: 1rem;
+            color: rgb(8, 8, 8);
             text-align: center;
+            text-shadow: 1px 1px 2px rgb(99, 99, 99);
         }
 
         .parab {
             width: 100%;
             font-size: 1.2em;
             margin: auto 0;
-        }
-
-        .butnb {
-            background-color: orangered;
-            padding: 0.5rem 0.75rem;
-            width: 100px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            color: azure;
-            text-decoration: none;
-            position: absolute;
-            bottom: 0.5rem;
-            border-radius: 4px;
-        }
-
-        .butnb:hover {
-            background-color: rgb(224, 60, 0);
-            transition: all 0.5s;
-            font-size: 1rem;
-            width: 7rem;
         }
 
         @media (max-width:1250px) {
@@ -334,12 +423,94 @@
             }
         }
 
+        /* AUF GALLERY */
+
+        .aufgalery {
+            background-color: rgba(0, 0, 0, 0.817);
+            margin: 3rem 0;
+        }
+
+
+        .gal-text {
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            padding: 2.5rem 5rem;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: auto auto auto;
+            gap: 0.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gal {
+            height: 200px;
+            box-shadow: 2px 2px 2px rgb(0, 0, 0);
+        }
+
+        .gal img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media (max-width:1050px) {
+            .gal {
+                height: 150px;
+            }
+        }
+
+        @media (max-width:900px) {
+            .gal {
+                height: 120px;
+            }
+        }
+
+        @media (max-width:750px) {
+            .gallery {
+                padding: 2.5rem 3rem;
+                grid-template-columns: 33% 33% 33%;
+                grid-template-rows: auto auto auto auto;
+            }
+
+            .gal {
+                height: 130px;
+            }
+        }
+
+        @media (max-width:600px) {
+            .gal {
+                height: 100px;
+            }
+        }
+
+        @media (max-width:400px) {
+            .gallery {
+                padding: 2.5rem 3rem;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: auto auto auto auto auto auto;
+            }
+
+            .gal {
+                height: 90px;
+            }
+        }
+
+        /* MISSION ACCOMPALISHED */
+
+        .missionwrapper {
+            padding: 1rem 0;
+            background-color: rgb(153, 153, 153);
+        }
+
         .mission {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
-            background-color: rgb(228, 202, 219);
         }
 
         .boxd {
@@ -358,7 +529,6 @@
 
         .textd {
             padding: 6px;
-            /* background-color: blue; */
         }
 
         .card-title {
@@ -371,7 +541,7 @@
             padding: 5px;
             font-size: 1rem;
             text-align: center;
-            font-weight: 400;
+            font-weight: 600;
             color: rgb(81, 0, 9);
         }
 
@@ -380,6 +550,8 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* FOOTER */
 
         footer {
             background-image: url(images/footer.avif);
@@ -403,24 +575,30 @@
             font-size: 0.9rem;
             display: flex;
             justify-content: center;
-        }        
+        }
+
         .foota {
             margin: 0.4rem;
         }
-        .foota img{
+
+        .foota img {
             width: 21px;
         }
+
         .footb {
             flex-wrap: wrap;
             margin: 0.5rem;
         }
+
         .footb i {
             font-size: 0.9rem;
             margin-right: 0.4rem;
         }
+
         .foota img:hover {
-            width: 30px;
+            width: 26px;
         }
+
         @media (max-width:650px) {
             .footbox2 {
                 flex-direction: column;
@@ -434,68 +612,116 @@
                 padding: 0.7rem;
             }
 
-        }
+            .foota img:hover {
+                width: 25px;
+            }
 
+        }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="donate.html">Donate</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="text">
-            <img src="images/logo.png" alt="" class="imgg">
-            <h1 class="head1">ANNANT UNNATI FOUNDATION</h1>
-            <p class="para1">Reg. No.- AASCA8913DE20213 <br>
-                (Registered under Niti-Ayog and Tax exemption under 12A,80G)
-            </p>
+
+    <!-- NAV-BAR -->
+
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="glassbg">
+        <div class="glassbg-effect">
+
+            <!-- NGO INFO -->
+
+            <div class="ngo-info">
+                <img src="images/logo.png" alt="" class="imgg" loading="lazy">
+                <h1 class="head1">ANNANT UNNATI FOUNDATION</h1>
+                <p class="para1">Reg. No.- AASCA8913DE20213 <br>
+                    (Registered under Niti-Ayog and Tax exemption under 12A,80G)
+                </p>
+            </div>
         </div>
     </div>
 
-    <h1 class="headings">LATEST EVENTS</h1>
-    <div class="events">
-        <div class="boxa" id="boxa1"><a href="https://www.instagram.com/reel/CwB3gD5gwF3/?igshid=MzRlODBiNWFlZA=="
-                class="eventlink" target="_blank">Independence Day Celebration</a>
-        </div>
-        <div class="boxa" id="boxa2"><a href="https://www.instagram.com/reel/Cvh8XkPAU2e/?igshid=MzRlODBiNWFlZA=="
-                class="eventlink" target="_blank">Sanitary Pad Distribution Drive</a>
-        </div>
-        <div class="boxa" id="boxa3"><a href="https://www.instagram.com/reel/Cu5yxwAATwj/?igshid=MzRlODBiNWFlZA=="
-                class="eventlink" target="_blank">Tree plantation <br> Day</a>
+    <div class="latestevents">
+        <h1 class="headings">LATEST EVENTS</h1>
+        <span class="slide">Slide To See More</span>
+        <div class="events">
+            <div class="boxa" id="boxa1">
+                <video src="img2/4years.mp4" autoplay playsinline loop muted></video>
+                <a href="https://www.instagram.com/reel/CxYIJBkRqcp/?igshid=NzZhOTFlYzFmZQ==" class="eventlink"
+                    target="_blank">Our 4 Year <br> Anniversary
+                    <span>click to see the post</span></a>
+            </div>
+            <div class="boxa" id="boxa2">
+                <video src="img2/janmashtmi (1).mp4" autoplay playsinline loop muted></video>
+                <a href="https://www.instagram.com/reel/Cw4zeVYRpEJ/?igshid=NzZhOTFlYzFmZQ=="
+                    class="eventlink" target="_blank">Janmashtami <br> Celebration
+                    <span>click to see the post</span></a>
+            </div>
+            <div class="boxa" id="boxa3">
+                <video src="img2/independenceday.mp4"  autoplay playsinline loop muted></video>
+                <a href="https://www.instagram.com/reel/CwB3gD5gwF3/?igshid=MzRlODBiNWFlZA=="
+                    class="eventlink" target="_blank">Independence Day <br> Celebration
+                    <span>click to see the post</span></a>
+            </div>
+            <div class="boxa" id="boxa4">
+                <video src="img2/holi.mp4"  autoplay playsinline loop muted></video>
+                <a href="https://www.instagram.com/reel/CpnU4HUhV3r/?igshid=NzZhOTFlYzFmZQ=="
+                    class="eventlink" target="_blank">Holi<br> Celebration
+                    <span>click to see the post</span></a>
+            </div>
+            <div class="boxa" id="boxa5">
+                <video src="img2/pad-distribution.mp4"  autoplay playsinline loop muted></video>
+                <a href="https://www.instagram.com/reel/Cvh8XkPAU2e/?igshid=MzRlODBiNWFlZA=="
+                    class="eventlink" target="_blank">Sanitary Pad <br> Distribution Drive
+                    <span>click to see the post</span></a>
+            </div>
+            <div class="boxa" id="boxa6">
+                <video src="img2/plantation.mp4"  autoplay playsinline loop muted></video>
+                <a href="https://www.instagram.com/reel/Cu5yxwAATwj/?igshid=MzRlODBiNWFlZA=="
+                    class="eventlink" target="_blank">Tree plantation <br> Day
+                    <span>click to see the post</span></a>
+            </div>
         </div>
     </div>
 
-    <div class="bgstats">
-        <div class="stats">
-            <div class="statbox">
-                <h1 class="statnum">350+</h1>
-                <h5 class="statname">Helped children</h5>
-            </div>
-            <div class="statbox">
-                <h1 class="statnum">200k+</h1>
-                <h5 class="statname">Donations</h5>
-            </div>
-            <div class="statbox">
-                <h1 class="statnum">50+</h1>
-                <h5 class="statname">Volunteers</h5>
-            </div>
-            <div class="statbox">
-                <h1 class="statnum">50+</h1>
-                <h5 class="statname">Projects</h5>
+
+    <!-- STATS -->
+    <div class="statswrap">
+        <div class="bgstats">
+            <div class="stats">
+                <div class="statbox">
+                    <h1 class="statnum">350+</h1>
+                    <h5 class="statname">Helped children</h5>
+                </div>
+                <div class="statbox">
+                    <h1 class="statnum">200k+</h1>
+                    <h5 class="statname">Donations</h5>
+                </div>
+                <div class="statbox">
+                    <h1 class="statnum">50+</h1>
+                    <h5 class="statname">Volunteers</h5>
+                </div>
+                <div class="statbox">
+                    <h1 class="statnum">50+</h1>
+                    <h5 class="statname">Projects</h5>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- ABOUT NGO -->
 
     <div class="aboutngo">
 
         <div class="boxb" id="boxb1">
-            <img src="images/we are.jpeg" alt="" class="imgb">
+            <img src="images/we are.jpeg" alt="" class="imgb" loading="lazy">
             <div class="textb">
                 <h2 class="headb">WHO WE ARE?</h2>
                 <p class="parab">A seed of an idea that was ~~
@@ -538,11 +764,11 @@
                     inaugurated with 97 children.
                 </p>
             </div>
-            <img src="images/believe in.jpeg" alt="" class="imgb">
+            <img src="images/believe in.jpeg" alt="" class="imgb" loading="lazy">
         </div>
 
         <div class="boxb" id="boxb3">
-            <img src="images/we do.jpeg" alt="" class="imgb">
+            <img src="images/we do.jpeg" alt="" class="imgb" loading="lazy">
             <div class="textb">
                 <h2 class="headb">WHAT WE DO?</h2>
                 <ul class="parab" id="listb">
@@ -550,7 +776,7 @@
                         underprivileged children .</li>
                     <li>Promoting awareness towards a sound health
                         among the children.</li>
-                    <li>Facilitating vocational training to the children 
+                    <li>Facilitating vocational training to the children
                         to reduce their skill gap which will help them in
                         either getting employed or starting their own
                         enterprise.</li>
@@ -568,121 +794,182 @@
         </div>
     </div>
 
-    <h1 class="headings">MISSION ACCOMPLISHED</h1>
+    <!-- AUF GALLERY -->
 
-    <div class="mission">
-        <div class="boxd">
-            <img src="images/aahar.jpeg" alt="" class="imgd">
-            <div class="textd">
-                <h3 class="card-title">Project Aahaar</h3>
-                <p class="card-text">
-                    The corona pandemic turned many
-                    lives upside down. Due to
-                    imposition of lock-down thousands
-                    of people lost their livelihoods.
-                    Therefore, we came forward to
-                    help those in need and distributed
-                    dry ration as well as cooked meals
-                    to 2000+ families.
-                </p>
-            </div>
-        </div>
-        <div class="boxd">
-            <img src="images/care.jpeg" alt="" class="imgd">
-            <div class="textd">
-                <h3 class="card-title">Project Care</h3>
-                <p class="card-text">
-                    This program aims to overcome one of the
-                    major public health challenges of maintaining
-                    oral hygiene. Many children lack the
-                    awareness of oral hygiene leading to severe
-                    health damages. This initiative aims to
-                    promote oral hygiene among children. We organized two free
-                    dental health check-up camps in span of an
-                    year. A team of four dentists assessed the oral
-                    hygiene of 215 children and distributed dental
-                    hygiene kits.
-                </p>
-            </div>
-        </div>
 
-        <div class="boxd">
-            <img src="images/aashayein.jpeg" alt="" class="imgd">
-            <div class="textd">
-                <h3 class="card-title">Project Aashayein</h3>
-                <p class="card-text">
-                    The objective of this project is to provide
-                    students an opportunity to express themselves
-                    through the means of different activities and
-                    focus on their all round personality
-                    development. Our foundation organizes annual
-                    cultural and sports programs and various
-                    dance, yoga, singing, painting and drama
-                    classes on weekends. This program has helped
-                    promote holistic development and cognitive
-                    skills in our children.
-                </p>
-            </div>
+    <div class="aufgalery">
+        <h1 class="headings">BE A PART OF THE CHANGE</h1>
+        <div class="gallery">
+            <div class="gal" id="g1"><img
+                    src="img2/1.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g2"><img
+                    src="img2/2.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g3"><img
+                    src="img2/3.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g4"><img
+                    src="img2/4.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g5"><img
+                    src="img2/5.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g6"><img
+                    src="img2/6.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g7"><img
+                    src="img2/7.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g8"><img
+                    src="img2/8.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g9"><img
+                    src="img2/9.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g10"><img
+                    src="img2/10.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g11"><img
+                    src="img2/11.jpg"
+                    alt="" loading="lazy"></div>
+            <div class="gal" id="g12"><img
+                    src="img2/12.jpg"
+                    alt="" loading="lazy"></div>
         </div>
+    </div>
 
-        <div class="boxd">
-            <img src="images/vikas.jpeg" alt="" class="imgd">
-            <div class="textd">
-                <h3 class="card-title">Project Vikas</h3>
-                <p class="card-text">
-                    Through this project, we aim to spread basic
-                    literacy in the society. We have taken several
-                    initiatives to achieve this, such as providing
-                    free education to over 200 underprivileged
-                    students and enrolling them in schools and
-                    colleges for higher education. We also provide
-                    books and stationery kits to our students to
-                    ensure quality education for all.
-                </p>
-            </div>
-        </div>
 
-        <div class="boxd">
-            <img src="images/odh.jpeg" alt="" class="imgd">
-            <div class="textd">
-                <h3 class="card-title">Project ODH</h3>
-                <p class="card-text">
-                    We conducted over 10 blanket distribution
-                    drive in the winter months. Our team of
-                    volunteers went around the NCR and
-                    distributed more than 500 blankets to the
-                    poor and homeless. We also conducted 5
-                    clothes distribution drives in the region of
-                    Indirapuram, Ghaziabad. This ensured a
-                    smile on the faces of people struggling to
-                    fight the chilly winter.
-                </p>
+    <!-- MISSIONS ACCOMPLISHED -->
+
+
+    <div class="missionwrapper">
+        <h1 class="headings">MISSION ACCOMPLISHED</h1>
+        <div class="mission">
+            <div class="boxd">
+                <img src="images/aahar.jpeg" alt="" class="imgd" loading="lazy">
+                <div class="textd">
+                    <h3 class="card-title">Project Aahaar</h3>
+                    <p class="card-text">
+                        The corona pandemic turned many
+                        lives upside down. Due to
+                        imposition of lock-down thousands
+                        of people lost their livelihoods.
+                        Therefore, we came forward to
+                        help those in need and distributed
+                        dry ration as well as cooked meals
+                        to 2000+ families.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="boxd">
-            <img src="images/shesafe.jpeg" alt="" class="imgd">
-            <div class="textd">
-                <h3 class="card-title">Project SheSafe</h3>
-                <p class="card-text">
-                    Through our SheSafe Project we took the initiative to
-                    distribute 100,000 sanitary pads to the needy and organized awareness meetings among
-                    the backward communities in different regions. We Provided access to sanitary pads to at least 10,000 women.
-                    One thousand (1000) school girls received support through proper knowledge,
-                    awareness and education on menstruation and related hygiene practices.
-                </p>
+            <div class="boxd">
+                <img src="images/care.jpeg" alt="" class="imgd" loading="lazy">
+                <div class="textd">
+                    <h3 class="card-title">Project Care</h3>
+                    <p class="card-text">
+                        This program aims to overcome one of the
+                        major public health challenges of maintaining
+                        oral hygiene. Many children lack the
+                        awareness of oral hygiene leading to severe
+                        health damages. This initiative aims to
+                        promote oral hygiene among children. We organized two free
+                        dental health check-up camps in span of an
+                        year. A team of four dentists assessed the oral
+                        hygiene of 215 children and distributed dental
+                        hygiene kits.
+                    </p>
+                </div>
+            </div>
+
+            <div class="boxd">
+                <img src="images/aashayein.jpeg" alt="" class="imgd" loading="lazy">
+                <div class="textd">
+                    <h3 class="card-title">Project Aashayein</h3>
+                    <p class="card-text">
+                        The objective of this project is to provide
+                        students an opportunity to express themselves
+                        through the means of different activities and
+                        focus on their all round personality
+                        development. Our foundation organizes annual
+                        cultural and sports programs and various
+                        dance, yoga, singing, painting and drama
+                        classes on weekends. This program has helped
+                        promote holistic development and cognitive
+                        skills in our children.
+                    </p>
+                </div>
+            </div>
+
+            <div class="boxd">
+                <img src="images/vikas.jpeg" alt="" class="imgd" loading="lazy">
+                <div class="textd">
+                    <h3 class="card-title">Project Vikas</h3>
+                    <p class="card-text">
+                        Through this project, we aim to spread basic
+                        literacy in the society. We have taken several
+                        initiatives to achieve this, such as providing
+                        free education to over 200 underprivileged
+                        students and enrolling them in schools and
+                        colleges for higher education. We also provide
+                        books and stationery kits to our students to
+                        ensure quality education for all.
+                    </p>
+                </div>
+            </div>
+
+            <div class="boxd">
+                <img src="images/odh.jpeg" alt="" class="imgd" loading="lazy">
+                <div class="textd">
+                    <h3 class="card-title">Project ODH</h3>
+                    <p class="card-text">
+                        We conducted over 10 blanket distribution
+                        drive in the winter months. Our team of
+                        volunteers went around the NCR and
+                        distributed more than 500 blankets to the
+                        poor and homeless. We also conducted 5
+                        clothes distribution drives in the region of
+                        Indirapuram, Ghaziabad. This ensured a
+                        smile on the faces of people struggling to
+                        fight the chilly winter.
+                    </p>
+                </div>
+            </div>
+            <div class="boxd">
+                <img src="images/shesafe.jpeg" alt="" class="imgd" loading="lazy">
+                <div class="textd">
+                    <h3 class="card-title">Project SheSafe</h3>
+                    <p class="card-text">
+                        Through our SheSafe Project we took the initiative to
+                        distribute 100,000 sanitary pads to the needy and organized awareness meetings among
+                        the backward communities in different regions. We Provided access to sanitary pads to at
+                        least
+                        10,000 women.
+                        One thousand (1000) school girls received support through proper knowledge,
+                        awareness and education on menstruation and related hygiene practices.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+
+
+    <!-- FOOTER -->
+
     <footer>
         <div class="footbg">
             <div class="footbox1">
-                <a href="https://maps.app.goo.gl/8kVH7sGimpcxr7hSA" class="foota" target="_blank"><img src="images/placeholder.png" alt=""></a>
-                <a href="https://www.facebook.com/profile.php?id=100066601167252&mibextid=b06tZ0" class="foota" target="_blank"><img src="images/facebook.png" alt=""></a>
-                <a href="https://instagram.com/annantunnatifoundation?igshid=MzRlODBiNWFlZA==" class="foota" target="_blank"><img src="images/instagram.png" alt=""></a>
-                <a href="https://twitter.com/AnnantUnnatiNGO" class="foota" target="_blank"><img src="images/twitter.png" alt=""></a>
-                <a href="https://www.linkedin.com/company/annant-unnati-foundation/" class="foota" target="_blank"><img src="images/linkedin.png" alt=""></a>
-                <a href="https://www.youtube.com/@annantunnatifoundation9013" class="foota" target="_blank"><img src="images/youtube2.png" alt=""></a>            
+                <a href="https://maps.app.goo.gl/8kVH7sGimpcxr7hSA" class="foota" target="_blank"><img
+                        src="images/placeholder.png" alt="" loading="lazy"></a>
+                <a href="https://www.facebook.com/profile.php?id=100066601167252&mibextid=b06tZ0" class="foota"
+                    target="_blank"><img src="images/facebook.png" alt="" loading="lazy"></a>
+                <a href="https://instagram.com/annantunnatifoundation?igshid=MzRlODBiNWFlZA==" class="foota"
+                    target="_blank"><img src="images/instagram.png" alt="" loading="lazy"></a>
+                <a href="https://twitter.com/AnnantUnnatiNGO" class="foota" target="_blank"><img
+                        src="images/twitter.png" alt="" loading="lazy"></a>
+                <a href="https://www.linkedin.com/company/annant-unnati-foundation/" class="foota" target="_blank"><img
+                        src="images/linkedin.png" alt="" loading="lazy"></a>
+                <a href="https://www.youtube.com/@annantunnatifoundation9013" class="foota" target="_blank"><img
+                        src="images/youtube2.png" alt="" loading="lazy"></a>
             </div>
             <div class="footbox2">
                 <p class="footb"><i class="fa-solid fa-location-dot" style="color: #ffffff;" id="home"></i>Swarn
@@ -693,6 +980,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
