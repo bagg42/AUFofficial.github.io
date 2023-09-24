@@ -204,6 +204,22 @@
             width: 100%;
         }
 
+        .latestevents i {
+            background-color: rgb(255, 255, 189);
+            border-radius: 50%;
+            padding: 5px;
+            top: 20px;
+            left: 20px;
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px black;
+        }
+
         .events {
             white-space: nowrap;
             overflow-x: auto;
@@ -254,8 +270,8 @@
             color: rgb(255, 255, 255);
             height: 100%;
             width: 100%;
-            font-size: 1.4rem;
-            opacity: 0;
+            font-size: 1.3rem;
+            opacity: 0.5;
             transition: all 0.5s;
             text-shadow: 2px 2px 2px rgb(0, 0, 0);
         }
@@ -282,6 +298,9 @@
 
             .latestevents {
                 padding: 30px 10px;
+            }
+            .eventlink{
+                font-size: 1rem;
             }
             .eventlink:hover {
                 font-size: 1.4rem;
@@ -656,7 +675,7 @@
         <span class="slide">Slide To See More</span>
         <div class="events">
             <div class="boxa" id="boxa1">
-                <video src="img2/4years.mp4" autoplay playsinline loop muted></video>
+                <video src="img2/4years.mp4" autoplay playsinline loop></video>
                 <a href="https://www.instagram.com/reel/CxYIJBkRqcp/?igshid=NzZhOTFlYzFmZQ==" class="eventlink"
                     target="_blank">Our 4 Year <br> Anniversary
                     <span>click to see the post</span></a>
@@ -692,6 +711,7 @@
                     <span>click to see the post</span></a>
             </div>
         </div>
+        <i class="fa-solid fa-volume-high vol" style="color: #000000;"></i>
     </div>
 
 
@@ -983,6 +1003,31 @@
             </div>
         </div>
     </footer>
+
+        <!-- JAVA SCRIPT -->
+
+    <script>
+        let volume = document.querySelector(".vol");
+        let vid1 = document.querySelector("video");
+
+        let flag=1;
+
+        volume.addEventListener("click",function(){
+
+            if(flag==1){
+                flag=0;
+                vid1.muted=true;
+                volume.classList.remove("fa-volume-high");
+                volume.classList.add("fa-volume-xmark");
+            }
+            else{
+                flag=1;
+                vid1.muted=false;
+                volume.classList.add("fa-volume-high");
+                volume.classList.remove("fa-volume-xmark");
+            }
+        })
+    </script>
 
 </body>
 
