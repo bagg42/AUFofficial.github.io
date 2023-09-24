@@ -676,7 +676,7 @@
         <span class="slide">Slide To See More</span>
         <div class="events">
             <div class="boxa" id="boxa1">
-                <video src="img2/4years - Trim.mp4" autoplay playsinline loop></video>
+                <video src="img2/4years - Trim.mp4" autoplay playsinline loop muted></video>
                 <a href="https://www.instagram.com/reel/CxYIJBkRqcp/?igshid=NzZhOTFlYzFmZQ==" class="eventlink"
                     target="_blank">Our 4 Year <br> Anniversary
                     <span>click to see the post</span></a>
@@ -712,7 +712,7 @@
                     <span>click to see the post</span></a>
             </div>
         </div>
-        <i class="fa-solid fa-volume-high vol" style="color: #000000;"></i>
+        <i class="fa-solid fa-volume-xmark vol" style="color: #000000;"></i>
     </div>
 
 
@@ -1011,21 +1011,21 @@
         let volume = document.querySelector(".vol");
         let vid1 = document.querySelector("video");
 
-        let flag=1;
+        let flag = 0;
 
-        volume.addEventListener("click",function(){
+        volume.addEventListener("click", function () {
 
-            if(flag==1){
-                flag=0;
-                vid1.muted=true;
-                volume.classList.remove("fa-volume-high");
-                volume.classList.add("fa-volume-xmark");
-            }
-            else{
-                flag=1;
-                vid1.muted=false;
+            if (flag == 0) {
+                flag = 1;
+                vid1.muted = false;
                 volume.classList.add("fa-volume-high");
                 volume.classList.remove("fa-volume-xmark");
+            }
+            else {
+                flag = 0;
+                vid1.muted = true;
+                volume.classList.remove("fa-volume-high");
+                volume.classList.add("fa-volume-xmark");
             }
         })
     </script>
