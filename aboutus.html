@@ -8,6 +8,10 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <script src="https://kit.fontawesome.com/ec366b3a1c.js" crossorigin="anonymous"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -16,10 +20,8 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
-        .header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        body {
+            position: relative;
         }
 
         nav {
@@ -29,6 +31,8 @@
             background-color: rgba(0, 0, 0, 0.712);
             position: fixed;
             top: 0;
+            left: 0;
+            z-index: 10;
         }
 
         nav ul {
@@ -55,13 +59,11 @@
 
         .active {
             color: rgb(142, 142, 255);
-            /* text-decoration: underline; */
         }
 
         .active:hover {
             color: rgb(142, 142, 255);
             cursor: context-menu;
-            /* text-decoration: underline; */
             font-size: 2rem;
         }
 
@@ -85,43 +87,178 @@
             }
         }
 
-        .img {
-            width: 100%;
-            /* border: 2px solid blue; */
-            position: relative;
-            height: auto;
-        }
-
-        .text {
-            width: 100%;
-            background-image: url(images/pinkbg.avif);
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 2rem;
-            display: flex;
-            font-weight: 600;
-            flex-direction: column;
-            font-size: 1.4em;
-        }
-
         .box1 {
-            align-self: first baseline;
+            width: 100%;
         }
 
-        .box2 {
-            align-self: last baseline;
+        .box1 img {
+            margin-top: 3.4rem;
+            max-inline-size: 100%;
+            block-size: auto;
         }
 
-        .quote {
-            width: 80px;
+        .box2{
+            background-color:rgb(208, 191, 212) ;
+            background-color:rgb(255, 255, 255) ;
+            display: none;
+            width: 100%;
+        }
+        .box2 .phoneimg1{
+            margin-top: 3.4rem;
+            max-inline-size: 100%;
+            block-size: auto;
+        }
+        .box2 .phoneimg2{ 
+            margin-top: 1rem;
+            max-inline-size: 100%;
+            block-size: auto;
         }
 
-        .quoteopp {
-            width: 80px;
-            margin-top: 4px;
+
+        .box3 {
+            background-color: rgb(255, 255, 255);
+            padding: 1rem 0 5rem 0;
         }
+
+        .box3 h1 {
+            text-align: center;
+            margin: 2rem;
+            font-family: 'Merriweather', serif;
+        }
+
+        .pos-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .pos1 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 24%;
+            height: 370px;
+        }
+
+        .pos1 img {
+            position: relative;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .pos-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            width: 80%;
+            height: 100px;
+            bottom: -60px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .pos-text h2 {
+            font-size: 1.11rem;
+            color: rgb(0, 0, 0);
+            font-family: 'Merriweather', serif;
+        }
+
+        .pos-text h3 {
+            font-size: 1rem;
+            font-weight: 1000;
+            color: rgb(84, 84, 84);
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        @media (max-width:1100px) {
+            .pos1 {
+                width: 27%;
+                height: 320px;
+            }
+
+        }
+
+        @media (max-width:900px) {
+            .pos1 {
+                width: 27%;
+                height: 300px;
+            }
+
+            .pos-text{
+                height: 80px;
+                bottom: -40px;
+            }
+
+            .pos-text h2 {
+                font-size: 1rem;
+            }
+
+            .pos-text h3 {
+                font-size: 0.9rem;
+            }
+
+        }
+
+        @media (max-width:700px) {
+            .pos1 {
+                width: 29%;
+                height: 230px;
+            }
+            .pos-text{
+                height: 70px;
+                bottom: -30px;
+            }
+
+            .pos-text h2 {
+                font-size: 0.9rem;
+            }
+
+            .pos-text h3 {
+                font-size: 0.8rem;
+            }
+
+        }
+        @media (max-width:450px) {
+            .box1{
+                display: none;
+            }
+            .box2{
+                display: block;
+            }
+            .pos-wrap {
+                flex-direction: column;
+            }
+            .pos1 {
+                width: 75%;
+                height: 350px;
+                margin-bottom: 60px;
+            }
+            .pos-text{
+                height: 80px;
+                bottom: -40px;
+            }
+
+            .pos-text h2 {
+                font-size: 1.1rem;
+            }
+
+            .pos-text h3 {
+                font-size: 1rem;
+            }
+
+        }
+
+
+
+
 
         footer {
             background-image: url(images/footer.avif);
@@ -150,7 +287,8 @@
         .foota {
             margin: 0.4rem;
         }
-        .foota img{
+
+        .foota img {
             width: 21px;
         }
 
@@ -186,40 +324,47 @@
 </head>
 
 <body>
-    <div class="img">
-        <img src="images/dpaboutus.png" alt="" class="img">
-        <div class="header">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#" class="active">About Us</a></li>
-                    <li><a href="donate.html">Donate</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-
-
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#" class="active">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="box1">
+        <img src="images/wholeimg.png" alt="">
     </div>
-    <div class="text">
-        <div class="box1">
-            <img src="images/quote.png" alt="" class="quote">
-        </div>
-        <div>
-            At AUF the future of the underprivileged is chalked out. We
-            are committed to building a place where education for every
-            child, irrespective of the boundaries, is imparted. Today we are
-            poised for growth and are best position to develop literacy
-            achievements are made possible due to the trust we have built
-            through various activities taking place at Annant Unnati
-            Foundation. At AUF, we want to create an atmosphere in which
-            every deprived child can experience a sense of growth and
-            responsibility towards a better future. We would like to invite
-            you all to join hands with us to support and guide us in our
-            journey of making the country a better place to live in.
-        </div>
-        <div class="box2">
-            <img src="images/quoteopp.png" alt="" class="quoteopp">
+
+    <div class="box2">
+        <img src="images/phone-founder.jpg" alt="" class="phoneimg1">
+        <img src="images/phone-text.jpg" alt="" class="phoneimg2">
+    </div>
+
+    <div class="box3">
+        <h1>OUR AMAZING TEAM</h1>
+        <div class="pos-wrap">
+            <div class="pos1">
+                <img src="images/director2-removebg-preview.png" alt="">
+                <div class="pos-text">
+                    <h2>Vikas Pal</h2>
+                    <h3>DIRECTOR</h3>
+                </div>
+            </div>
+            <div class="pos1">
+                <img src="images/co-founder-removebg-preview.png" alt="">
+                <div class="pos-text">
+                    <h2>Annant Choudhary</h2>
+                    <h3>CO-FOUNDER</h3>
+                </div>
+            </div>
+            <div class="pos1">
+                <img src="images/director1-removebg-preview.png" alt="">
+                <div class="pos-text">
+                    <h2>Unnati Choudhary</h2>
+                    <h3>DIRECTOR</h3>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -248,7 +393,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
